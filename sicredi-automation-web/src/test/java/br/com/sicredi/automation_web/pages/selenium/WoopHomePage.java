@@ -16,18 +16,33 @@ public class WoopHomePage extends WoopHomePageElementMap {
 		logPrint("Acessou a tela de Login");
 	}
 
-	public void efetuaLogin() {
+	public void efetuaLoginComDadosValidos() {
 		user.sendKeys("himeneutst1@mailinator.com");
 		password.sendKeys("Minhasenha123");
-		logPrint("Dados informados corretamente");
+		logPrint("E-mail e Senha preenchidos com dados válidos");
 		btnEntrar.click();
 	}
 
-	public void validaLogin() {
+	public void efetuaLoginComDadosInvalidos() {
+		user.sendKeys("abcde@email.com");
+		password.sendKeys("Minhasenha123");
+		logPrint("E-mail e Senha preenchidos com dados inválidos");
+		btnEntrar.click();
+	}
+
+	public void validaLoginComDadosValidos() {
 		waitElement(userLogado, 10);
 		moveToElement(userLogado);
 		if (userLogado.isDisplayed()) {
 			logPrint("Login efetuado corretamente");
+		}
+	}
+
+	public void validaLoginComDadosInvalidos() {
+		waitElement(dadosIncorretos, 10);
+		moveToElement(dadosIncorretos);
+		if (dadosIncorretos.isDisplayed()) {
+			logPrint("Login não efetuado. Dados Incorretos");
 		}
 	}
 

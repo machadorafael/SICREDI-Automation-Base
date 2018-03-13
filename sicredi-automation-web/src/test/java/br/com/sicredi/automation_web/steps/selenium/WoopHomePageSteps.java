@@ -20,15 +20,27 @@ public class WoopHomePageSteps {
 	}
 
 	@E("preencho os campos E-mail e Senha com dados validos")
-	public void efetuaLogin() {
+	public void efetuaLoginComDadosValidos() {
 		WoopHomePage woopHomePage = new WoopHomePage();
-		woopHomePage.efetuaLogin();
+		woopHomePage.efetuaLoginComDadosValidos();
+	}
+
+	@E("preencho os campos E-mail e Senha com dados invalidos")
+	public void efetuaLoginComDadosInvalidos() {
+		WoopHomePage woopHomePage = new WoopHomePage();
+		woopHomePage.efetuaLoginComDadosInvalidos();
 	}
 
 	@Entao("devo conseguir efetuar login corretamente")
-	public void validaLogin() {
+	public void validaLoginComDadosValidos() {
 		WoopHomePage woopHomePage = new WoopHomePage();
-		woopHomePage.validaLogin();
+		woopHomePage.validaLoginComDadosValidos();
+	}
+
+	@Entao("nao devo conseguir efetuar login")
+	public void validaLoginComDadosInvalidos() {
+		WoopHomePage woopHomePage = new WoopHomePage();
+		woopHomePage.validaLoginComDadosInvalidos();
 	}
 
 }
