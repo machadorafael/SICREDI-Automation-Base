@@ -1,0 +1,40 @@
+package br.com.sicredi.automation_web.pages.selenium;
+
+import org.openqa.selenium.support.PageFactory;
+
+import br.com.sicredi.automation_web.util.TestRule;
+
+public class WoopHomePage extends HomePageElementMap {
+
+	public WoopHomePage() {
+		PageFactory.initElements(TestRule.getDriver(), this);
+	}
+
+	public void acessarLogin() {
+		moveToElement(btnLogin);
+		btnLogin.click();
+		logPrint("Acessou a tela de Login");
+	}
+
+	public void efetuaLogin() {
+		user.sendKeys("himeneutst1@mailinator.com");
+		password.sendKeys("Minhasenha123");
+		btnEntrar.click();
+		logPrint("Efetuou Login corretamente");
+	}
+
+	public void acessarMenuServicosFabricaDeTeste() {
+		moveToElement(menuServicos);
+		logPrint("Acessou menu Servicos");
+		submenuFabricaDeTestes.click();
+		logPrint("Acessou submenu Fabrica de Testes");
+	}
+
+	public void acessarMenuQualidade() {
+		menuQualidade.click();
+	}
+
+	public void acessarMenuOportunidades() {
+		menuOportunidades.click();
+	}
+}

@@ -1,0 +1,9 @@
+#language: pt
+#encoding: iso-8859-1
+Funcionalidade: Selenium Teste Exemplo
+
+  @selenium
+  Cenario: Efetuar Login com dados validos
+    Dado que estou na HomePage do Woop    
+    Quando clico no botao Login
+    Entao devem ser exibidos os campos de E-mail e Senha

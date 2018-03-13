@@ -1,0 +1,30 @@
+package br.com.sicredi.automation_web.steps.selenium;
+
+import org.junit.Assert;
+
+import br.com.sicredi.automation_web.pages.selenium.QuemSomosPage;
+import br.com.sicredi.automation_web.pages.selenium.WoopHomePage;
+import br.com.sicredi.automation_web.util.TestRule;
+import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.Entao;
+import cucumber.api.java.pt.Quando;
+
+public class WoopHomePageSteps {
+	@Dado("que estou na HomePage do Woop")
+	public void acessarHomePageCWI() {
+		TestRule.openApplicationChrome("https://www.tst.woopsicredi.com/");
+	}
+
+	@Quando("clico no botao Login")
+	public void acessarMenuSobreCWI_QuemSomos() {
+		WoopHomePage woopHomePage = new WoopHomePage();
+		woopHomePage.acessarLogin();
+	}
+
+//	@Entao("devem ser exibidos os campos de E-mail e Senha")
+//	public void exibeTelaDeLogin() {
+//		LoginPage loginPage = new LoginPage();
+//		loginPage.exibeTelaDeLogin(;)
+//	}
+
+}
