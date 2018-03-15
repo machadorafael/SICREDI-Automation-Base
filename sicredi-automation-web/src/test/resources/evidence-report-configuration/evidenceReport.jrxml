@@ -73,13 +73,6 @@
 				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="0" width="63" height="20"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{SEL_LABEL_PROJECT}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement x="0" y="30" width="50" height="20"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
@@ -119,7 +112,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{SEL_LABEL_FAILED}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="64" y="0" width="491" height="20"/>
+				<reportElement x="64" y="0" width="491" height="10"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
