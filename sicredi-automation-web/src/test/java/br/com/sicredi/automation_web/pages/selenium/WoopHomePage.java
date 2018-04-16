@@ -11,39 +11,46 @@ public class WoopHomePage extends WoopHomePageElementMap {
 	}
 
 	public void acessarLogin() {
-		moveToElement(btnLogin);
 		btnLogin.click();
-		logPrint("> Acessou a tela de Login");
+		logPrint("Acessou a tela de Login");
 	}
 
 	public void efetuaLoginComDadosValidos() {
 		user.sendKeys("himeneutst1@mailinator.com");
 		password.sendKeys("Minhasenha123");
-		logPrint("> E-mail e Senha preenchidos com dados válidos");
+		logPrint("E-mail e Senha preenchidos com dados válidos");
 		btnEntrar.click();
 	}
 
 	public void efetuaLoginComDadosInvalidos() {
 		user.sendKeys("abcde@email.com");
 		password.sendKeys("Minhasenha123");
-		logPrint("> E-mail e Senha preenchidos com dados inválidos");
+		logPrint("E-mail e Senha preenchidos com dados inválidos");
 		btnEntrar.click();
 	}
 
 	public void validaLoginComDadosValidos() {
+		// driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		waitElement(userLogado, 5);
-		moveToElement(userLogado);
-		if (userLogado.isDisplayed()) {
-			logPrint("> Login efetuado corretamente");
-		}
+		userLogado.isDisplayed();
+		logPrint("Login efetuado corretamente");
 	}
 
 	public void validaLoginComDadosInvalidos() {
+		// driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		waitElement(dadosIncorretos, 5);
-		moveToElement(dadosIncorretos);
-		if (dadosIncorretos.isDisplayed()) {
-			logPrint("> Login não efetuado. Dados Incorretos");
-		}
+		dadosIncorretos.isDisplayed();
+		logPrint("Login não efetuado. Dados Incorretos");
+
+	}
+
+	public void realizaLogout() {
+		waitElement(userLogado, 5);
+		// moveToElement(dadosIncorretos);
+		userLogado.click();
+		logPrint("Clicou no Menu do Usuário");
+		sair.click();
+		logPrint("Clicou no botão 'Sair'. Logout efetuado corretamente");
 	}
 
 }

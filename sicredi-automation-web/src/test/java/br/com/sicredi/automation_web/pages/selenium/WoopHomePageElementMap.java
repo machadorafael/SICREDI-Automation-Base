@@ -19,10 +19,13 @@ public class WoopHomePageElementMap extends BasePage {
 	@FindBy(id = "loginComponentLoginEmailSenha")
 	protected WebElement btnEntrar;
 
-	@FindBy(xpath = "//*[@id=\"userMenu\"]/li/a/img")
+	@FindBy(id = "userMenu")
 	protected WebElement userLogado;
 
 	@FindBy(xpath = "//*[@class=\"show-error-component pull-left\"]")
 	protected WebElement dadosIncorretos;
+	
+	@FindBy(className = "logout")
+	protected WebElement sair;
 
 }

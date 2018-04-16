@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="652" key="DIALOG_X_ORIGIN"/>
+		<item value="362" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="url" key="selection"/>
+		<item value="openApplication" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="url"/>
 			<item value="openApplication"/>
+			<item value="prop"/>
+			<item value="automation.pr"/>
+			<item value="automation"/>
 			<item value="cwi"/>
+			<item value="SeleniumEvidence"/>
+			<item value="selenium"/>
+			<item value="seleniume"/>
+			<item value="evidenceReport"/>
+			<item value="Evidence"/>
+			<item value="url"/>
 			<item value="base"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

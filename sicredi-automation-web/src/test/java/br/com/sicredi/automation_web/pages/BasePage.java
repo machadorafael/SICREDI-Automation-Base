@@ -11,8 +11,6 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import javax.imageio.ImageIO;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -27,7 +25,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.sikuli.script.App;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.ImagePath;
 import org.sikuli.script.Key;
@@ -49,7 +46,7 @@ public class BasePage {
 	protected ExtentReports extentReport = TestRule.getExtentReports();
 	protected EvidenceReport evidenceReport = TestRule.getEvidenceReport();
 	protected Screen sikuli = TestRule.getSikuli();
-	protected App sikuliApp = TestRule.getSikuliApp();
+	// protected App sikuliApp = TestRule.getSikuliApp();
 	protected boolean isSikuliAutomation = "sikuli".equals(TestRule.getActiveAutomation());
 	public final Logger logger = Logger.getLogger(BasePage.class);
 
@@ -149,19 +146,8 @@ public class BasePage {
 		String screenShotName = datahora + ".png";
 		File scrFile = null;
 		try {
-			if (isSikuliAutomation) {
-				scrFile = new File("target/relatorios/img/" + screenShotName);
-				try {
-					ImageIO.write(sikuli.capture(sikuliApp.window()).getImage(), "png", scrFile);
-				} catch (Exception e) {
-					ImageIO.write(sikuli.capture().getImage(), "png", scrFile);
-					logger.debug("Erro ao obter screenshot do app, possivelmente o app '" + sikuliApp.getName()
-							+ "' nao esta em execucao." + "Obtido screenshot da tela inteira.");
-				}
-			} else {
-				scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-				FileUtils.copyFile(scrFile, new File("target/relatorios/img/" + screenShotName));
-			}
+			scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(scrFile, new File("target/relatorios/img/" + screenShotName));
 		} catch (IOException e) {
 			logger.error("Erro ao salvar screenshot.", e);
 		}
@@ -343,12 +329,6 @@ public class BasePage {
 		} catch (FindFailed e) {
 			throw new RuntimeException(e);
 		}
-	}
-
-	protected App appFocus(String appName) {
-		sikuliApp = App.focus(appName);
-		TestRule.setSikuliApp(sikuliApp);
-		return sikuliApp;
 	}
 
 	protected void multiType(String arg, int count) {

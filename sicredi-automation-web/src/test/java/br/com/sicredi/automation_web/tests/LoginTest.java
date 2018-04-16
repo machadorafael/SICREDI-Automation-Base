@@ -8,11 +8,17 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:features", tags = "@selenium",
-	  glue = {""}, monochrome = true, dryRun = false)
-public class SeleniumTest {
+@CucumberOptions(
+		features = "classpath:features", 
+		tags = "@login, @logout",	 
+		glue = "", 
+		monochrome = false, 
+		dryRun = false
+)
+
+public class LoginTest {
 
 	@ClassRule
 	public static TestRule testRule = new TestRule();
-	
+
 }

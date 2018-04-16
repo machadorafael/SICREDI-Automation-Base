@@ -16,26 +16,25 @@ import com.googlecode.seleniumjavaevidence.report.GenerateEvidenceReport;
 import com.googlecode.seleniumjavaevidence.selenium.SeleniumEvidence;
 
 public class EvidenceReport {
-	
+
 	private List<SeleniumEvidence> evidence = null;
 	private String testError = null;
-	
-	public EvidenceReport(){
+
+	public EvidenceReport() {
 		this.evidence = new ArrayList<SeleniumEvidence>();
 	}
-	
+
 	public void setError(String errorMessage) {
 		this.testError = errorMessage;
 	}
-	
+
 	public List<SeleniumEvidence> getEvidenceReport() {
 		return this.evidence;
 	}
-		
+
 	public void addEvidence(String log, WebDriver driver) {
 		try {
-			evidence.add(new SeleniumEvidence(log,
-					((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64)));
+			evidence.add(new SeleniumEvidence(log, ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64)));
 		} catch (WebDriverException e) {
 			this.setError(e.toString());
 			e.printStackTrace();
@@ -44,7 +43,7 @@ public class EvidenceReport {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void addEvidence(String log, String image) {
 		try {
 			String base24StringFromImage = Base64.encodeBase64String(FileUtils.readFileToByteArray(new File(image)));
@@ -53,12 +52,14 @@ public class EvidenceReport {
 			e.printStackTrace();
 		}
 	}
-	
-	public void generateEvidenceReport(List<SeleniumEvidence> evidences, String testName, String authorName, String reportTitle) {
+
+	public void generateEvidenceReport(List<SeleniumEvidence> evidences, String testName, String authorName,
+			String reportTitle) {
 		try {
 			GenerateEvidenceReport.generatePDFEvidence(evidences, testName, authorName, reportTitle, this.testError);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
+
 }

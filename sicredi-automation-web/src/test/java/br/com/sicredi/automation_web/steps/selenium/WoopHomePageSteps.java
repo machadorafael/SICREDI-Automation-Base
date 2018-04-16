@@ -19,6 +19,13 @@ public class WoopHomePageSteps {
 		woopHomePage.acessarLogin();
 	}
 
+	@Quando("estou logado")
+	public void realizaLogin() {
+		WoopHomePage woopHomePage = new WoopHomePage();
+		woopHomePage.acessarLogin();
+		woopHomePage.efetuaLoginComDadosValidos();
+	}
+
 	@E("preencho os campos E-mail e Senha com dados validos")
 	public void efetuaLoginComDadosValidos() {
 		WoopHomePage woopHomePage = new WoopHomePage();
@@ -41,6 +48,12 @@ public class WoopHomePageSteps {
 	public void validaLoginComDadosInvalidos() {
 		WoopHomePage woopHomePage = new WoopHomePage();
 		woopHomePage.validaLoginComDadosInvalidos();
+	}
+
+	@Entao("devo conseguir efetuar logout")
+	public void realizaLogout() {
+		WoopHomePage woopHomePage = new WoopHomePage();
+		woopHomePage.realizaLogout();
 	}
 
 }
