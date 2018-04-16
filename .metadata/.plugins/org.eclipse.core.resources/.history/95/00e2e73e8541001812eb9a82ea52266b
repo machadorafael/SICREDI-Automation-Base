@@ -1,0 +1,3 @@
+#chrome, chromemobile
+test.application=chromeresponsivo
+test.base_url=https://www.tst.woopsicredi.com/

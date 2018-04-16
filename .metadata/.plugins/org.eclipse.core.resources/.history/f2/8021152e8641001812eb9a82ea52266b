@@ -1,0 +1,3 @@
+#chrome, chromemobile
+test.application=chromemobile
+test.base_url=https://www.uat.woopsicredi.com/
