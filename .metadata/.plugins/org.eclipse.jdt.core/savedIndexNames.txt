@@ -26,7 +26,6 @@ INDEX VERSION 1.130+C:\Users\fnac\Desktop\Rafael-Automation-Report\SICREDI-Autom
 1230538165.index
 2364484066.index
 3772190254.index
-242546209.index
 3808123788.index
 1860642593.index
 1048395439.index

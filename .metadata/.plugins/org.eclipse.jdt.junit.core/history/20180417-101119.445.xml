@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LoginTest (1)" project="sicredi-automation-web" tests="11" started="11" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.sicredi.automation_web.tests.LoginTest" time="78.188">
+    <testsuite name="Funcionalidade: Selenium Teste Exemplo" time="78.188">
+      <testsuite name="Cenario: Efetuar Login com dados validos" time="16.878">
+        <testcase name="Dado que estou na HomePage do Woop" classname="Cenario: Efetuar Login com dados validos" time="0.76"/>
+        <testcase name="Quando clico no botao Login" classname="Cenario: Efetuar Login com dados validos" time="0.781"/>
+        <testcase name="E preencho os campos E-mail e Senha com dados validos" classname="Cenario: Efetuar Login com dados validos" time="3.961"/>
+        <testcase name="Entao devo conseguir efetuar login corretamente" classname="Cenario: Efetuar Login com dados validos" time="11.376"/>
+      </testsuite>
+      <testsuite name="Cenario: Efetuar Login com dados invalidos" time="9.801">
+        <testcase name="Dado que estou na HomePage do Woop" classname="Cenario: Efetuar Login com dados invalidos" time="0.701"/>
+        <testcase name="Quando clico no botao Login" classname="Cenario: Efetuar Login com dados invalidos" time="0.701"/>
+        <testcase name="E preencho os campos E-mail e Senha com dados invalidos" classname="Cenario: Efetuar Login com dados invalidos" time="1.589"/>
+        <testcase name="Entao nao devo conseguir efetuar login" classname="Cenario: Efetuar Login com dados invalidos" time="6.81"/>
+      </testsuite>
+      <testsuite name="Cenario: Efetuar Logout" time="14.691">
+        <testcase name="Dado que estou na HomePage do Woop" classname="Cenario: Efetuar Logout" time="2.635"/>
+        <testcase name="Quando estou logado" classname="Cenario: Efetuar Logout" time="4.328"/>
+        <testcase name="Entao devo conseguir efetuar logout" classname="Cenario: Efetuar Logout" time="7.728"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

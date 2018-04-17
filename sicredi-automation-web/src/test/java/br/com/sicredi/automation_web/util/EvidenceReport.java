@@ -16,7 +16,7 @@ import com.googlecode.seleniumjavaevidence.report.GenerateEvidenceReport;
 import com.googlecode.seleniumjavaevidence.selenium.SeleniumEvidence;
 
 public class EvidenceReport {
-
+ 
 	private List<SeleniumEvidence> evidence = null;
 	private String testError = null;
 
