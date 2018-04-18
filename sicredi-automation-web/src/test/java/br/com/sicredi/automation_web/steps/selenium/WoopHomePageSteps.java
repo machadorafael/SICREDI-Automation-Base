@@ -38,6 +38,24 @@ public class WoopHomePageSteps {
 		woopHomePage.efetuaLoginComDadosInvalidos();
 	}
 
+	@E("clico em Esqueci minha senha")
+	public void esqueciMinhaSenha() {
+		WoopHomePage woopHomePage = new WoopHomePage();
+		woopHomePage.esqueciMinhaSenha();
+	}
+
+	@E("preencho o campo E-mail")
+	public void preencherCampoEmail() {
+		WoopHomePage woopHomePage = new WoopHomePage();
+		woopHomePage.preencherEmailDeRecuperacao();
+	}
+
+	@E("clico no botao Enviar")
+	public void clicarEmEnviar() {
+		WoopHomePage woopHomePage = new WoopHomePage();
+		woopHomePage.enviarRecuperacaoDeSenha();
+	}
+
 	@Entao("devo conseguir efetuar login corretamente")
 	public void validaLoginComDadosValidos() {
 		WoopHomePage woopHomePage = new WoopHomePage();
@@ -54,6 +72,12 @@ public class WoopHomePageSteps {
 	public void realizaLogout() {
 		WoopHomePage woopHomePage = new WoopHomePage();
 		woopHomePage.realizaLogout();
+	}
+
+	@Entao("devo ser informado de que recebi um e-mail de recuperacao de senha")
+	public void infoRecuperacaoDeSenha() {
+		WoopHomePage woopHomePage = new WoopHomePage();
+		woopHomePage.infoRecuperacaoDeSenha();
 	}
 
 }

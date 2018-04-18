@@ -24,8 +24,17 @@ public class WoopHomePageElementMap extends BasePage {
 
 	@FindBy(xpath = "//*[@class=\"show-error-component pull-left\"]")
 	protected WebElement dadosIncorretos;
-	
+
 	@FindBy(className = "logout")
 	protected WebElement sair;
+
+	@FindBy(linkText = "Esqueci minha senha")
+	protected WebElement esqueciMinhaSenha;
+
+	@FindBy(id = "loginComponentLoginEmailSenha")
+	protected WebElement enviarRecuperacaoDeSenha;
+
+	@FindBy(xpath = "//*[@class=\"alert alert-info text-center ng-star-inserted\"]")
+	protected WebElement infoRecuperacaoDeSenha;
 
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunTest (1)" project="sicredi-automation-web" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.sicredi.automation_web.tests.RunTest" time="14.426">
+    <testsuite name="Funcionalidade: Efetuar Login/Logout no Woop - Sicredi" time="14.426">
+      <testsuite name="Cenario: Acessar o link Esqueci minha senha" time="14.426">
+        <testcase name="Dado que estou na HomePage do Woop" classname="Cenario: Acessar o link Esqueci minha senha" time="0.842"/>
+        <testcase name="Quando clico no botao Login" classname="Cenario: Acessar o link Esqueci minha senha" time="0.494"/>
+        <testcase name="E clico em Esqueci minha senha" classname="Cenario: Acessar o link Esqueci minha senha" time="0.548"/>
+        <testcase name="E preencho o campo E-mail" classname="Cenario: Acessar o link Esqueci minha senha" time="0.471"/>
+        <testcase name="E clico no botao Enviar" classname="Cenario: Acessar o link Esqueci minha senha" time="1.381"/>
+        <testcase name="Entao devo ser informado de que recebi um e-mail de recuperacao de senha" classname="Cenario: Acessar o link Esqueci minha senha" time="10.69"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

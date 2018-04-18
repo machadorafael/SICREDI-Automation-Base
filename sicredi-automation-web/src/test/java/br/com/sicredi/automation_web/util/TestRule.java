@@ -69,12 +69,17 @@ public class TestRule extends TestWatcher {
 
 	@After
 	public void afterCenario() {
-		if (driver != null) {
+		if (scenario.isFailed()) {
+			if (driver != null) {
+				BasePage basePage = new BasePage();
+				basePage.logPrintFail("Status: O Teste Falhou");
+			}
+		} else {
 			BasePage basePage = new BasePage();
+			basePage.logPrint("Status: O Teste Passou");
 		}
 
 		// FINALIZA EVIDENCIAS
-
 		evidenceReport.generateEvidenceReport(evidenceReport.getEvidenceReport(), scenario.getName(),
 				scenario.getName(), scenario.getName());
 

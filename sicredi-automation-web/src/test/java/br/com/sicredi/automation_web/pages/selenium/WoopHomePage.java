@@ -53,4 +53,23 @@ public class WoopHomePage extends WoopHomePageElementMap {
 		logPrint("Clicou no botão 'Sair'. Logout efetuado corretamente");
 	}
 
+	public void esqueciMinhaSenha() {
+		esqueciMinhaSenha.click();
+		logPrint("Clicou no link 'Esqueci minha senha'");
+	}
+	
+	public void preencherEmailDeRecuperacao() {
+		user.sendKeys("ohpaiii@mailinator.com");
+		logPrint("E-mail preenchido corretamente");
+	}
+	
+	public void enviarRecuperacaoDeSenha() {
+		enviarRecuperacaoDeSenha.click();
+		logPrint("Clicou em 'Enviar'");
+	}
+	
+	public void infoRecuperacaoDeSenha() {
+		waitElement(infoRecuperacaoDeSenha, 3);
+		logPrint("Email de recuperação de senha enviado com sucesso");
+	}
 }
